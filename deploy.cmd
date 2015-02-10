@@ -116,6 +116,9 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   popd
 )
 
+call :ExecuteCmd !NPM_CMD! install component -g
+call :ExecuteCmd !NPM_CMD! install git://github.com/ariya/esprima#harmony
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :: Post deployment stub
